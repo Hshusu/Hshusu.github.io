@@ -66,7 +66,7 @@ function myMovemenu(elementid, x) {
         menuItemsList.style.opacity = 100
         clearInterval(id);
       } else {
-        pos+=20; 
+        pos+=10; 
         menuItemsList.style.left = pos + "px"; 
         opacity+=0.05; 
         menuItemsList.style.opacity = opacity
@@ -95,16 +95,30 @@ function myMovemenu(elementid, x) {
   
   // 
   function doCalculate() {
+        
+    let tot=0;
+  const ingerdients =  document.querySelectorAll("#ingerdient");
+  const inglist = document.querySelector("#inglist");
+  for(let itm of ingerdients){
+    tot += parseFloat(itm.innerHTML);
+  }
+  const nn = document.createElement("li");
+  const tn = document.createTextNode(tot);
+  nn.appendChild(tn);
+  inglist.insertBefore(nn, inglist.children[1]);
+
     let totalTips = (1.0 * bill.value) * (1.0 * tip.value) * 0.01;
     let totalAmount =((1.0 * bill.value) + (1.0 * totalTips));
     let amountPerPerson = totalAmount/(numPeople.value)
     
-    amt.innerHTML = totalAmount;
+    amt.innerHTML = tot;
     ttp.innerHTML = totalTips;
     app.innerHTML = amountPerPerson;
-  }
+
 
   //scrollable text
+  }
+
 
   let options = {
     threshold: 0.5,

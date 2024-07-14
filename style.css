@@ -16,6 +16,9 @@ body {
     font-family: futura;
    
 }
+html{
+  overflow-x: hidden;
+}
 #stripe-container {
   overflow: hidden;
   position: absolute;
