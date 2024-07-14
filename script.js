@@ -155,7 +155,7 @@ const config = {
   minimumDistance: 75,
   glowDuration: 75,
   maximumGlowPointSpacing: 10,
-  colors: ["#ff4545", "#white"],
+  colors: ["#c73333", "#white"],
   sizes: ["3.4rem", "2rem", "1.6rem"],
   animations: ["part1", "part2", "part3"]
 }
