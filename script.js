@@ -74,8 +74,34 @@ function myMovemenu(elementid, x) {
     }
 
   }
- 
-//gotta fix this shit
+ //canvas minigame
+
+ var object = {
+  width : 10,
+  height :10
+
+};
+
+ var x =0;
+ var y=0;
+ var c = document.getElementById("white-box");
+ var width = c.width;
+ var height = c.height;
+ var ctx = c.getContext("2d");
+ ctx.fillRect(x,y,100,100)
+ ctx.stroke();
+ function minigamestart(){
+  setInterval(move,100);
+ }
+ function move(){
+  ctx.clearRect(0, 0, width, height);
+  if(x<width){
+    x++;
+  ctx.fillRect(x,y,object.width,object.height)
+  ctx.stroke();
+}
+ }
+ minigamestart();
 // recipe calc
   // fields
   const bill = document.querySelector("#bill");
