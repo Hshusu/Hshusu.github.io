@@ -1,8 +1,20 @@
+
 //target all elements to save to constants
 const page1btn=document.querySelector("#page1btn");
 const page2btn=document.querySelector("#page2btn");
 const page3btn=document.querySelector("#page3btn");
 var allpages=document.querySelectorAll(".page");
+ 
+const card1=document.querySelector("#card1");
+const card2=document.querySelector("#card2");
+const card3=document.querySelector("#card3");
+const card4=document.querySelector("#card4");
+const card5=document.querySelector("#card5");
+const card6=document.querySelector("#card6");
+const card7=document.querySelector("#card7");
+const card8=document.querySelector("#card8");
+var allcards=document.querySelectorAll(".white-box");
+
 //select all subtopic pages
 console.log(allpages);
 hideall();
@@ -76,32 +88,80 @@ function myMovemenu(elementid, x) {
   }
  //canvas minigame
 
- var object = {
-  width : 10,
-  height :10
 
-};
+ card1.addEventListener("click", function () {
+  flipcard(1);
+  console.log(1);
+  });
+  card2.addEventListener("click", function () {
+    flipcard(2);
+  });
+  card3.addEventListener("click", function () {
+    flipcard(3);
+  });
+  card4.addEventListener("click", function () {
+    flipcard(4);
+    });
+    card5.addEventListener("click", function () {
+      flipcard(5);
+    });
+    card6.addEventListener("click", function () {
+      flipcard(6);
+    });
+    card7.addEventListener("click", function () {
+      flipcard(7);
+      });
+      card8.addEventListener("click", function () {
+        flipcard(8);
+      });
 
- var x =0;
- var y=0;
- var c = document.getElementById("white-box");
- var width = c.width;
- var height = c.height;
- var ctx = c.getContext("2d");
- ctx.fillRect(x,y,100,100)
- ctx.stroke();
- function minigamestart(){
-  setInterval(move,100);
- }
- function move(){
-  ctx.clearRect(0, 0, width, height);
-  if(x<width){
-    x++;
-  ctx.fillRect(x,y,object.width,object.height)
-  ctx.stroke();
-}
- }
- minigamestart();
+
+ function hideallcards(){ //function to hide all pages
+  for(let onecard of allcards){ //go through all subtopic pages
+    onecard.classList.remove("flip") //hide it
+  
+  }
+  }
+  var othercard=null;
+  function flipcard(cardno){ //function to hide all pages
+    if(cardno > 4){
+      cardnum = cardno-4
+    }
+    else{
+      cardnum = cardno
+    }
+    let onecard=document.querySelector("#card"+cardno);
+    onecard.classList.add("flip")
+    if (othercard==null){
+      othercard =cardnum
+    }
+    else{
+      console.log(othercard);
+      console.log(cardnum);
+      if (cardnum == othercard){
+        let carrdds=document.querySelectorAll(".flip");
+        for(let cards2 of carrdds){ //go through all subtopic pages
+
+          cards2.classList.add("flipdone") 
+          cards2.classList.remove("flip") 
+        }
+        othercard=null;
+      }
+      else{
+        othercard=null;
+        setTimeout(function () {
+          hideallcards();
+     }, 1000);
+  
+
+      }
+    }
+
+    }
+
+
+
+
 // recipe calc
   // fields
   const bill = document.querySelector("#bill");
