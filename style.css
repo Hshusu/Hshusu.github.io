@@ -14,7 +14,8 @@ body {
     
     background-color: #ff4545;
     font-family: futura;
-   
+    margin-left: auto;
+    margin-right: auto;
 }
 html{
   overflow-x: hidden;
@@ -231,7 +232,7 @@ animation: pan 360s linear infinite;
       }
       .white-box {  background-color: transparent;
         width: 500px;
-        height: 500px;
+        height: calc(300px + 5vw);
         flex-basis:30vw;
         perspective: 1000px;
         z-index: 5;
