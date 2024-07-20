@@ -173,7 +173,7 @@ animation: pan 360s linear infinite;
     }
     @media only screen and (max-width: 540px) {
       .main{
-        top:65%;
+        top:45%;
       }
 
       .body{
