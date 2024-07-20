@@ -167,7 +167,7 @@ animation: pan 360s linear infinite;
     @media only screen and (max-width: 850px) and (min-width: 540px) {
       
       .main{
-        top: 25%;
+        top: 50%;
       }
       
     }
