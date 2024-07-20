@@ -153,12 +153,6 @@ animation: pan 360s linear infinite;
   left: 50%;
   transform: translate(-50%, -100%);
 }
-.main.land{
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -100%);
-}
 .maintitle{
         font-size:calc(70px - 1vw);
         color: white;
@@ -173,7 +167,7 @@ animation: pan 360s linear infinite;
     @media only screen and (max-width: 850px) and (min-width: 540px) {
       
       .main{
-        top: 45%;
+        top: 25%;
       }
       
     }

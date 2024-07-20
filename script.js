@@ -65,6 +65,7 @@ window.addEventListener('resize', function() {
 	}
 });
 
+//for menu moving anim
 function myMovemenu(elementid, x) {
 	let id = null;
 	let pos = -300;
@@ -126,6 +127,7 @@ function hideallcards() { //function to hide all pages
 }
 var othercard = null;
 
+//handles flipping and matching
 function flipcard(cardno) { //function to hide all pages
 
 	let onecard = document.querySelector("#card" + cardno);
@@ -156,7 +158,7 @@ function flipcard(cardno) { //function to hide all pages
 
 
 
-
+//holds food data
 class Food {
 	constructor(description, calories, imgSource) {
 		this.description = description;
@@ -195,8 +197,7 @@ function removelist() {
 		itm.remove();
 	}
 }
-// 
-
+// add food to foodlist
 function addFoodToDiv(food) {
 
 	let div = document.getElementById("foodlist");
@@ -230,6 +231,7 @@ function actival() {
 	}
 }
 
+//calc which items fit cals
 function doCalculate() {
 	removelist();
 	if (mincal > maxcal) {
@@ -271,7 +273,7 @@ faders.forEach(fader => {
 	scrollappear.observe(fader);
 
 });
-
+//for loading the fade anims
 function reloadfaders() {
 	faders = document.querySelectorAll(".fadein");
 	var scrollappear = new IntersectionObserver(
