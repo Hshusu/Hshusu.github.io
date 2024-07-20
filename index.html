@@ -13,18 +13,20 @@ content="width=device-width, maximum-scale=1"
 <body>
     <nav> <!--menu systtm-->
 
-        <button id="hamIcon"class="pgbtn">Menu</button></li>
+        <button id="hamIcon" class="pgbtn">Menu</button>
         <ul>
         <li><button id="page1btn" class="pgbtn">main page</button></li>
     <!--main menu have a info sliding in -->
         <li><button class="pgbtn" id="page2btn">Recipie Calculator</button></li>
-        <li><button class="pgbtn" id="page3btn">Sub Topic 3</button></li>
+        <li><button class="pgbtn" id="page3btn">Food Card Matching</button></li>
         </ul>
     </nav>  
-    <div id="top"></div>
 <!-- Star background -->
 <div id="starcont">
     <div id="starpat"></div>
+</div>
+<div id="stripe-container">
+  <div id="stripe-pattern"></div>
 </div>
 <div id="pagecontainer">
     <div class="page" id="page1">
@@ -39,9 +41,6 @@ content="width=device-width, maximum-scale=1"
 
 
 <div class="body">
-    <div id="stripe-container">
-        <div id="stripe-pattern"></div>
-      </div>
     <div class = flex-container>
         <div class = "flex-item flexheader">
            Food: A Taste Odessey
@@ -121,206 +120,150 @@ content="width=device-width, maximum-scale=1"
 
 
 <div class="body">
-    <div id="stripe-container">
-        <div id="stripe-pattern"></div>
-      </div>
+
     <div class = flex-container>
         <div class = "flex-item flexheader">
             a calculator which gives the appropriate portions depending on how many people there are!
         </div>
-  
-        <div class = "flex-item fleximage ">
-            <button id="button-image chickenrice">
-            <img src="images/overwatch-2.jpg" width="350" height="200" alt="overwatch-2">
-            </button>
-            <div class = "txt">
-              Chicken rice
-             </div>
-            </div>
-             <div class = "flex-item fleximage ">
-                <button id="button-image pineappletarts">
-                <img src="images/overwatch-2.jpg" width="350" height="200" alt="overwatch-2">
-                </button>
-                <div class = "txt">
-                    pineapple tarts
-                 </div>
-              </div>
-              <div class = "flex-item fleximage ">
-                <button id="button-image hamburgers">
-                <img src="images/overwatch-2.jpg" width="350" height="200" alt="overwatch-2">
-                </button>
-                <div class = "txt">
-                  hamburgers
-                 </div>
-              </div>
-              <div class = "flex-item flexdivider"></div>
-        
-              <div class = "flex-item flexheader">
-                 Recipie
-              </div>
-              <div class = "flex-item tbox ">
-                The podcast of extraordinary gentlemen is a podcast i created with a few friends which uploads weekly, it typically involves us discussing many topics ranging from oj simpson to the latest assassins creed game
-     
-             </div>
-             <div class = "flex-item tbox ">
+        <div class = "flex-item fleximage fadein faderight">
+          <img src="images/10310245.png" width="450" height="300" alt="calculator img">
+      </div>
+      <div class = "flex-item tbox fadein fadeleft ">
+        input your minimum and maximum calories for your meal and it will give you a list of foods which fit your requirements
+
+      </div>
+
+
+             <div class = "flex-item qnbox ">
                 <div id="left">
                     <form action="#" onsubmit="return false">
-                      <label for="bill">Bill Amount</label>
-                      <input name="amount" id="bill" value="0.0" type="number" min="0" step="0.01">
-                      <label for="people">Number of People</label>
-                      <input name="numPeople" id="numPeople" value="1" min="1" type="number">
-                      <label for="tip">tips %</label>
-                      <input name="tip" id="tip" value="10" type="number" min="0" step="0.01">
-                      <button id="send">send</button>
+                      <label for="mincal">Min calories</label>
+                      <input name="mincal" id="mincal" value="0.0" type="number" min="0" step="100">
+                      <label for="maxcal">&nbsp;&nbsp;Max calories</label>
+                      <input name="maxcal" id="maxcal" value="0.0" min="1" type="number" step="100">
                     </form>
                   </div>
              </div>
-             <div class = "flex-item tbox ">
-             <ul id="inglist">
-                <li>
-                    water <div id="ingerdient">1</div>grams
-                </li>
-                <li> flour <div id="ingerdient">1</div></li>
-                <li> rice <div id="ingerdient">1</div></li>
-              </ul> 
+             
+        <div class = "flex-item flexdivider"></div>
+       
+             <div id="foodlist">
+
+
+             </div>
             </div>
-             <div class = "flex-item tbox ">
-                <div id="right">
-                    <p>Total Tips: <span id="ttp">0</span></p>
-                    <p>Total Amount: <span id="amt">0</span></p>
-                    <p>Amount per person: <span id="app">0</span></p>
-                  </div>
-   
-    </div>
-
-
-    </div>
+            <div class = "flex-item flexdivider"></div>
 </div>    
+
 </div>
 <div class="page" id="page3">
      
     <!-- stripes background -->
  
     <div class="main " >
-     <div class = maintitle >The Art Of Cooking </div>
-     <div class = subtitle >By Marcus Ang </div>
+     <div class = maintitle >Food Fun Facts </div>
+     <div class = subtitle >Matching game</div>
      </div>
      <!-- main contenet -->
  
  
  <div class="body">
-     <div id="stripe-container">
-         <div id="stripe-pattern"></div>
-       </div>
-     <div class = flex-container>
 
-         <div class = "flex-item flexheader">
-           Totally accurate shopping simulatorr!
-         </div>
-         <div class = "flex-item fleximage fadein faderight">
-            <img src="images/SMC-Food-Dreams-Main-1000x667.webp" width="450" height="300" alt="handsom dude">
-        </div>
-        <div class = "flex-item tbox fadein fadeleft ">
-           From Alfredo to Zeppole food comes in many shapes and sizes, yet one thing is consistent throughout : they are all italian.. wait no thats wrong ! 
-           they provide sustinence and flavour for people all over the world. For all of human history food has played a historical role in many historical events.
-           So instead of focusing on human history, let us focus on the history of food
-
-        </div>
+     <div class = "flex-container mid">
+      <div class = "flex-item flexheader fadein fadeleft ">
+        Match the food cards!
+     </div>
  
          <button id="card6" class="white-box">
-             <div class="white-box-inner">
-               <div class="white-box-front">
-                 <img class="cardimg" src="images/koolaid.webp" width="200" height="200" alt="handsom dude">
-               </div>
-               <div class="white-box-back">
-                 <div>We love that guy</div>
-               </div>
-             </div>
+             <span class="white-box-inner">
+               <span class="white-box-front">
+                 <img class="cardimg" src="images/2771401.png" width="200" height="200" alt="foodicon">
+               </span>
+               <span class="white-box-back">
+                <img class="cardimg" src="images/5787016.png" width="200" height="200" alt="burger">
+               </span>
+             </span>
            </button>
          <button id="card2" class="white-box">
-             <div class="white-box-inner">
-               <div class="white-box-front">
-                 <img class="cardimg" src="images/koolaid.webp" width="200" height="200" alt="handsom dude">
-               </div>
-               <div class="white-box-back">
-                 <div>We love that guy</div>
-               </div>
-             </div>
+             <span class="white-box-inner">
+               <span class="white-box-front">
+                 <img class="cardimg" src="images/2771401.png" width="200" height="200" alt="foodicon">
+               </span>
+               <span class="white-box-back">
+                <img class="cardimg" src="images/5787016.png" width="200" height="200" alt="burger">
+               </span>
+             </span>
            </button>
               <button id="card1" class="white-box">
-                 <div class="white-box-inner">
-                   <div class="white-box-front">
-                     <img class="cardimg" src="images/koolaid.webp" width="200" height="200" alt="handsom dude">
-                   </div>
-                   <div class="white-box-back">
-                     <div>We love that guy</div>
-                   </div>
-                 </div>
+                 <span class="white-box-inner">
+                   <span class="white-box-front">
+                     <img class="cardimg" src="images/2771401.png" width="200" height="200" alt="foodicon">
+                   </span>
+                   <span class="white-box-back">
+                    <img class="cardimg" src="images/1623786.png" width="200" height="200" alt="ramen">
+                   </span>
+                 </span>
                </button>
                <button id="card4" class="white-box">
-                 <div class="white-box-inner">
-                   <div class="white-box-front">
-                     <img class="cardimg" src="images/koolaid.webp" width="200" height="200" alt="handsom dude">
-                   </div>
-                   <div class="white-box-back">
-                     <div>We love that guy</div>
-                   </div>
-                 </div>
+                 <span class="white-box-inner">
+                   <span class="white-box-front">
+                     <img class="cardimg" src="images/2771401.png" width="200" height="200" alt="foodicon">
+                   </span>
+                   <span class="white-box-back">
+                    <img class="cardimg" src="images/fast-food-icons-freetaco_107421.png" width="200" height="200" alt="taco">
+                   </span>
+                 </span>
                </button>
  
                <button id="card3" class="white-box">
-                 <div class="white-box-inner">
-                   <div class="white-box-front">
-                     <img  class="cardimg" src="images/koolaid.webp" width="200" height="200" alt="handsom dude">
-                   </div>
-                   <div class="white-box-back">
-                     <div>We love that guy</div>
-                   </div>
-                 </div>
+                 <span class="white-box-inner">
+                   <span class="white-box-front">
+                     <img  class="cardimg" src="images/2771401.png" width="200" height="200" alt="foodicon">
+                   </span>
+                   <span class="white-box-back">
+                    <img class="cardimg" src="images/4812953.png" width="200" height="200" alt="chken rice">
+                   </span>
+                 </span>
                </button>
  
                <button id="card5" class="white-box">
-                 <div class="white-box-inner">
-                   <div class="white-box-front">
-                     <img  class="cardimg" src="images/koolaid.webp" width="200" height="200" alt="handsom dude">
-                   </div>
-                   <div class="white-box-back">
-                     <div>We love that guy</div>
-                   </div>
-                 </div>
+                 <span class="white-box-inner">
+                   <span class="white-box-front">
+                     <img  class="cardimg" src="images/2771401.png" width="200" height="200" alt="foodicon">
+                   </span>
+                   <span class="white-box-back">
+                    <img class="cardimg" src="images/1623786.png" width="200" height="200" alt="ramen">
+                   </span>
+                 </span>
                </button>
  
  
                <button id="card8" class="white-box">
-                 <div class="white-box-inner">
-                   <div class="white-box-front">
-                     <img class="cardimg" src="images/koolaid.webp" width="200" height="200" alt="handsom dude">
-                   </div>
-                   <div class="white-box-back">
-                     <div>We love that guy</div>
-                   </div>
-                 </div>
+                 <span class="white-box-inner">
+                   <span class="white-box-front">
+                     <img class="cardimg" src="images/2771401.png" width="200" height="200" alt="foodicon">
+                   </span>
+                   <span class="white-box-back">
+                    <img class="cardimg" src="images/fast-food-icons-freetaco_107421.png" width="200" height="200" alt="taco">
+                   </span>
+                 </span>
                </button>
                <button id="card7" class="white-box">
-                 <div class="white-box-inner">
-                   <div class="white-box-front">
-                     <img class="cardimg" src="images/koolaid.webp" width="200" height="200" alt="handsom dude">
-                   </div>
-                   <div class="white-box-back">
-                     <div>We love that guy</div>
-                   </div>
-                 </div>
+                 <span class="white-box-inner">
+                   <span class="white-box-front">
+                     <img class="cardimg" src="images/2771401.png" width="200" height="200" alt="foodicon">
+                   </span>
+                   <span class="white-box-back">
+                    <img class="cardimg" src="images/4812953.png" width="200" height="200" alt="chken rice">
+                   </span>
+                 </span>
                </button>
+
      </div>
+     <div class = "flex-item flexdivider"></div>
  </div>
- 
- 
- 
- 
- 
-     </div>
-
-
+</div>
+</div>
 </body>
 
 </html>
