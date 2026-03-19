@@ -4,6 +4,11 @@ const page2btn = document.querySelector("#page2btn");
 const page3btn = document.querySelector("#page3btn");
 var allpages = document.querySelectorAll(".page");
 
+const srpgBtn = document.querySelector("#srpg-btn");
+const hikeBtn = document.querySelector("#hike-btn");
+const srpgSection = document.querySelector("#srpg-section");
+const hikeSection = document.querySelector("#hike-section");
+
 const card1 = document.querySelector("#card1");
 const card2 = document.querySelector("#card2");
 const card3 = document.querySelector("#card3");
@@ -36,19 +41,53 @@ function show(pgno) { //function to show selected page no
 }
 /*Listen for clicks on the buttons, assign anonymous
 eventhandler functions to call show function*/
-page1btn.addEventListener("click", function() {
-	show(1);
-});
-page2btn.addEventListener("click", function() {
-	show(2);
-});
+if (page1btn) {
+	page1btn.addEventListener("click", function() {
+		show(1);
+	});
+}
+
+if (page2btn) {
+	page2btn.addEventListener("click", function() {
+		show(2);
+	});
+}
+
+if (page3btn) {
+	page3btn.addEventListener("click", function() {
+		show(3);
+	});
+}
+
+if (srpgBtn && srpgSection) {
+	srpgBtn.addEventListener("click", function() {
+		srpgSection.scrollIntoView({
+			behavior: "smooth",
+			block: "start"
+		});
+	});
+}
+
+if (hikeBtn && hikeSection) {
+	hikeBtn.addEventListener("click", function() {
+		hikeSection.scrollIntoView({
+			behavior: "smooth",
+			block: "start"
+		});
+	});
+}
 /*JS for hamMenu */
 const hamBtn = document.querySelector("#hamIcon");
-hamBtn.addEventListener("click", toggleMenus);
+if (hamBtn) {
+	hamBtn.addEventListener("click", toggleMenus);
+}
 const menuItemsList = document.querySelector("nav ul");
 
 function toggleMenus() {
 	console.log("clicked");
+	if (!menuItemsList) {
+		return;
+	}
 	menuItemsList.classList.toggle("menuHide");
 
 	if (menuItemsList.classList.contains("menuHide")) {
@@ -57,13 +96,16 @@ function toggleMenus() {
 	}
 }
 window.addEventListener('resize', function() {
-	if (window.matchMedia("(min-width: 801px)").matches) {
+	if (menuItemsList && window.matchMedia("(min-width: 801px)").matches) {
 		menuItemsList.classList.remove("menuHide");
 	}
 });
 
 //for menu moving anim
 function myMovemenu(elementid, x) {
+	if (!menuItemsList) {
+		return;
+	}
 	let id = null;
 	let pos = -300;
 	let opacity = 0;
@@ -89,31 +131,47 @@ function myMovemenu(elementid, x) {
 //canvas minigame
 
 
-card1.addEventListener("click", function() {
-	flipcard(1);
-	console.log(1);
-});
-card2.addEventListener("click", function() {
-	flipcard(2);
-});
-card3.addEventListener("click", function() {
-	flipcard(3);
-});
-card4.addEventListener("click", function() {
-	flipcard(4);
-});
-card5.addEventListener("click", function() {
-	flipcard(5);
-});
-card6.addEventListener("click", function() {
-	flipcard(6);
-});
-card7.addEventListener("click", function() {
-	flipcard(7);
-});
-card8.addEventListener("click", function() {
-	flipcard(8);
-});
+if (card1) {
+	card1.addEventListener("click", function() {
+		flipcard(1);
+		console.log(1);
+	});
+}
+if (card2) {
+	card2.addEventListener("click", function() {
+		flipcard(2);
+	});
+}
+if (card3) {
+	card3.addEventListener("click", function() {
+		flipcard(3);
+	});
+}
+if (card4) {
+	card4.addEventListener("click", function() {
+		flipcard(4);
+	});
+}
+if (card5) {
+	card5.addEventListener("click", function() {
+		flipcard(5);
+	});
+}
+if (card6) {
+	card6.addEventListener("click", function() {
+		flipcard(6);
+	});
+}
+if (card7) {
+	card7.addEventListener("click", function() {
+		flipcard(7);
+	});
+}
+if (card8) {
+	card8.addEventListener("click", function() {
+		flipcard(8);
+	});
+}
 
 
 function hideallcards() { //function to hide all pages
