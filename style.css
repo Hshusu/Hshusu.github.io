@@ -378,10 +378,14 @@ animation: pan 360s linear infinite;
         background: none;
         border: none;
         cursor: pointer;
-          transition: filter 0.25s ease-out;
+        transition: filter 0.25s ease-out;
         border-radius: 15px;
         overflow: visible;
-          filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4)) drop-shadow(0 5px 10px rgba(0,0,0,0.3));
+        filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4)) drop-shadow(0 5px 10px rgba(0,0,0,0.3));
+        flex: 0 1 calc(50% - 40px);
+        max-width: 560px;
+        display: flex;
+        justify-content: center;
       }
 
       .project-btn:hover {
@@ -393,7 +397,7 @@ animation: pan 360s linear infinite;
       }
 
       .project-btn img {
-        width: min(90vw, 560px);
+        width: 100%;
         aspect-ratio: 560 / 373;
         height: auto;
         object-fit: cover;
@@ -411,9 +415,62 @@ animation: pan 360s linear infinite;
         transform: scale(1.08);
       }
 
+      .art-gallery {
+        z-index: 5;
+        flex-basis: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(260px, 1fr));
+        gap: 26px;
+        padding: 24px;
+      }
+
+      .art-card {
+        background: rgba(255, 255, 255, 0.92);
+        border: 2px solid var(--light_red);
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .art-card img {
+        width: 100%;
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
+        display: block;
+      }
+
+      .art-card-body {
+        padding: 14px 16px 18px;
+        color: var(--light_red);
+        text-align: left;
+      }
+
+      .art-card-body h3 {
+        margin: 0 0 8px;
+        font-size: clamp(24px, 2.4vw, 34px);
+        line-height: 1.15;
+      }
+
+      .art-card-body p {
+        margin: 0;
+        font-size: clamp(16px, 1.5vw, 22px);
+        line-height: 1.35;
+      }
+
       @media screen and (max-width: 768px) {
+        .project-btn {
+          flex-basis: 100%;
+          max-width: 440px;
+        }
+
+        .art-gallery {
+          grid-template-columns: 1fr;
+          padding: 16px;
+          gap: 18px;
+        }
+
         .project-btn img {
-          width: min(90vw, 440px);
+          width: 100%;
         }
         .project-buttons {
           gap: 20px;
@@ -421,8 +478,12 @@ animation: pan 360s linear infinite;
       }
 
       @media screen and (max-width: 540px) {
+        .project-btn {
+          max-width: 340px;
+        }
+
         .project-btn img {
-          width: min(92vw, 340px);
+          width: 100%;
         }
       }
       .qnbox{

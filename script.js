@@ -6,8 +6,10 @@ var allpages = document.querySelectorAll(".page");
 
 const srpgBtn = document.querySelector("#srpg-btn");
 const hikeBtn = document.querySelector("#hike-btn");
+const faceoffBtn = document.querySelector("#faceoff-btn");
 const srpgSection = document.querySelector("#srpg-section");
 const hikeSection = document.querySelector("#hike-section");
+const faceoffSection = document.querySelector("#faceoff-section");
 
 const card1 = document.querySelector("#card1");
 const card2 = document.querySelector("#card2");
@@ -71,6 +73,15 @@ if (srpgBtn && srpgSection) {
 if (hikeBtn && hikeSection) {
 	hikeBtn.addEventListener("click", function() {
 		hikeSection.scrollIntoView({
+			behavior: "smooth",
+			block: "start"
+		});
+	});
+}
+
+if (faceoffBtn && faceoffSection) {
+	faceoffBtn.addEventListener("click", function() {
+		faceoffSection.scrollIntoView({
 			behavior: "smooth",
 			block: "start"
 		});
